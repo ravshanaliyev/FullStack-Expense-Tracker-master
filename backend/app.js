@@ -9,7 +9,13 @@ require("dotenv").config()
 const PORT  = process.env.PORT 
 // middleware
 app.use(express.json())
-app.use(cors())
+app.use(
+  cors({
+    origin: ["https://full-stack-expense-tracker-master-zhab.vercel.app/"],
+    methods: ["GET", "POST"],
+    credentials: true,
+  })
+);
 
 
 // routes
