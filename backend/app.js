@@ -19,6 +19,7 @@ readdirSync("./routes").map((route) => app.use("/api/v1", require("./routes/" + 
 
 app.get("/", (req, res) => {
     res.send("Hello World")
+    res.json("H")
 })
 const server = () => {
     // server
